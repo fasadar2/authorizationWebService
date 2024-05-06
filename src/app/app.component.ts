@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'authorization';
+  ngOnInit(): void {
+    this.GoToLogin();
+  }
+  constructor(private router: Router) { }
+  GoToLogin() {
+    this.router.navigate(['/login']);
+  }
 }
+

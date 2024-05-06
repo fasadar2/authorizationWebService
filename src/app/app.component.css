@@ -1,0 +1,45 @@
+
+.back_color{
+  margin-top: 7%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-comp
+{
+
+  display: flex; /* Делает столбец вертикальным */
+  width: 80%;   /* ширина прямоугольника, например 50% от ширины экрана */
+  height: 480px;  /* высота прямоугольника, например 50% от высоты экрана */
+  background-color: white; /* Цвет прямоугольника */
+  border-radius: 20px;
+  /* Дополнительно, если нужны конкретные размеры в пикселях, можно указать их вместо процентов */
+}
+.logo
+{
+  padding: 5px 0 15px 15px;
+  width: 256px;
+  height: 256px;
+}
+
+.text-name
+{
+
+  margin: 15px 15px 15px 35px;
+}
+.column-container {
+  /* Стили для контейнера */
+  margin-top: 2%;
+
+}
+.text-sign
+{
+  margin: 5px 15px 15px 110px;
+}
+.content-block
+{
+  margin-top: 10%;
+  flex: 1;
+  float:left;
+}

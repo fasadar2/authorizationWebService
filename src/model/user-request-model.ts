@@ -1,4 +1,4 @@
-export class userRequestModel{
+export class UserRequestModel{
   login:string;
   password:string;
   constructor(login:string,password:string) {
