@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {UserRequestModel} from "../model/user-request-model";
-import {Observable} from "rxjs";
+import {Observable, timeout} from "rxjs";
 import {ajax} from "rxjs/internal/ajax/ajax";
 import {environment} from "../environments/environment";
 import {UserResponceModel} from "../model/user-responce-model";
@@ -11,7 +11,7 @@ import {AjaxResponse} from "rxjs/internal/ajax/AjaxResponse";
 })
 export class UserRequestService
 {
-  user:UserResponceModel|undefined = undefined;
+  user:UserResponceModel|undefined;
   get password(): string {
     return <string>this._password;
   }
@@ -30,27 +30,27 @@ export class UserRequestService
   private _password:string="";
   authorise()
   {
-    let user_request:UserRequestModel = new UserRequestModel(this._login,this._password);
-    let apiData = this.auth(user_request)
-    console.log(apiData)
+    console.log(this.user?.id)
+    this.auth()
+
+    console.log(this.user?.id)
 
   }
-  async auth(user_request: UserRequestModel | undefined) {
-    const request: Observable<AjaxResponse<UserResponceModel>> = ajax({
-      url: environment.serverUrl,
+  async auth() {
+    const apiData: Observable<AjaxResponse<UserResponceModel>> = ajax({
+      url: environment.serverUrl + "/auth",
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: {
-        login: user_request?.login,
-        password: user_request?.password,
+        login: this._login,
+        password: this._password,
       }
     });
-    return request.subscribe({
+    apiData.subscribe({
       next: _ => {
-        this.user = _.response;
-      }
+        this.user = _.response      }
     })
   }
 }

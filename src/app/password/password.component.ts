@@ -7,6 +7,7 @@ import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {MatError, MatFormField} from "@angular/material/form-field";
 import {UserRequestService} from "../../service/user-request-service";
 import {MatInput} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-password',
@@ -16,7 +17,8 @@ import {MatInput} from "@angular/material/input";
     MatFormField,
     MatError,
     MatFormField,
-    MatInput
+    MatInput,
+    MatButton
   ],
   templateUrl: './password.component.html',
   styleUrl: './password.component.css'

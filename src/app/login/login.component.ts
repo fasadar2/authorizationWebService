@@ -24,9 +24,6 @@ import {UserRequestService} from "../../service/user-request-service";
     ReactiveFormsModule,
     MatError,
     MatButton,
-    MatButton,
-    MatButton,
-    MatButton
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
