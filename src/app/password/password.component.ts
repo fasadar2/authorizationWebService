@@ -8,18 +8,20 @@ import {MatError, MatFormField} from "@angular/material/form-field";
 import {UserRequestService} from "../../service/user-request-service";
 import {MatInput} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
+import {MatCardActions} from "@angular/material/card";
 
 @Component({
   selector: 'app-password',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    MatFormField,
-    MatError,
-    MatFormField,
-    MatInput,
-    MatButton
-  ],
+    imports: [
+        ReactiveFormsModule,
+        MatFormField,
+        MatError,
+        MatFormField,
+        MatInput,
+        MatButton,
+        MatCardActions
+    ],
   templateUrl: './password.component.html',
   styleUrl: './password.component.css'
 })

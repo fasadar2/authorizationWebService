@@ -7,24 +7,26 @@ import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {MatButton} from "@angular/material/button";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserRequestService} from "../../service/user-request-service";
+import {MatCardActions} from "@angular/material/card";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    MatLabel,
-    MatInput,
-    MatFormField,
-    MatInput,
-    MatSuffix,
-    MatInput,
-    MatFormField,
-    MatHint,
-    MatInput,
-    ReactiveFormsModule,
-    MatError,
-    MatButton,
-  ],
+    imports: [
+        MatLabel,
+        MatInput,
+        MatFormField,
+        MatInput,
+        MatSuffix,
+        MatInput,
+        MatFormField,
+        MatHint,
+        MatInput,
+        ReactiveFormsModule,
+        MatError,
+        MatButton,
+        MatCardActions,
+    ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

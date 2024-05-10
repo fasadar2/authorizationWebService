@@ -1,5 +1,5 @@
 html{
-  background: rgba(105, 255, 165, 0.14);
+  background: rgba(105, 255, 165, 0.04);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -12,3 +12,11 @@ height: 1080px;
 
 background: rgba(105, 255, 165, 0.2);
 */
+
+html, body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

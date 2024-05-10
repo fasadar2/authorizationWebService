@@ -1,15 +1,18 @@
-<div class = "container">
+
   <div class = "login-container">
     <mat-form-field  class = "login-form">
       <input matInput class = "login-form" placeholder="Ввдетие ваш логин"[formControl]="login"
              (blur)="updateErrorMessage()" required>
       <mat-error class = 'error'>{{errorMessage}}</mat-error>
     </mat-form-field>
+    <mat-card-actions align="end">
+      <button mat-button class="button-next" (click)="Next()">
+      <span class="text">
+      Далее
+    </span></button>
+    </mat-card-actions>
   </div>
-  <div class = "button-div">
-    <button  mat-button (click)="Next()" class = "button-next"><span class="text">Далее</span></button>
-  </div>
-</div>
+
 
 
 

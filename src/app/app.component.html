@@ -1,15 +1,22 @@
-<div class = "back_color">
-  <div class = "background-comp">
-    <div class="column-container">
-      <h1 class = "text-name">MediTechTrack</h1>
-      <img src="assets/logo.svg"  alt="logo" class="logo">
-      <h1 class = "text-sign">Вход</h1>
+<div class="card-container" fxLayout="column" fxLayoutAlign="center center">
+<mat-card>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div fxFlex="none">
+      <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title><h1 class = "text-name">MediTechTrack</h1></mat-card-title>
+            <mat-card-subtitle><img mat-card-image src="assets/logo.svg" alt="logo" class="logo"></mat-card-subtitle>
+            <mat-card-subtitle><h1 class = "text-sign">Вход</h1></mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
     </div>
-    <div class ="content-block">
-      <router-outlet></router-outlet>
+    <div fxFlex>
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
     </div>
   </div>
+
+</mat-card>
 </div>
-
-
 
