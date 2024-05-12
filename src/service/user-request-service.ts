@@ -1,5 +1,4 @@
 import {Injectable} from "@angular/core";
-import {UserRequestModel} from "../model/user-request-model";
 import {Observable, timeout} from "rxjs";
 import {ajax} from "rxjs/internal/ajax/ajax";
 import {environment} from "../environments/environment";
