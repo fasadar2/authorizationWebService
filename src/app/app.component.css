@@ -23,10 +23,11 @@
   height: 256px;
 }
 
-.text-name
+.text
 {
 
-  margin: 15px 15px 15px 35px;
+  margin: 5px 15px 15px 55px;
+
 }
 .column-container {
   /* Стили для контейнера */

@@ -1,7 +1,8 @@
 
   <div class = "login-container">
     <mat-form-field  class = "login-form">
-      <input matInput class = "login-form" placeholder="Ввдетие ваш логин"[formControl]="login"
+      <mat-label>Логин</mat-label>
+      <input matInput class = "login-form" [formControl]="login"
              (blur)="updateErrorMessage()" required>
       <mat-error class = 'error'>{{errorMessage}}</mat-error>
     </mat-form-field>

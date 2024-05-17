@@ -4,31 +4,35 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
 import {merge} from "rxjs";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
-import {MatError, MatFormField} from "@angular/material/form-field";
+import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import {UserRequestService} from "../../service/user-request-service";
 import {MatInput} from "@angular/material/input";
-import {MatButton} from "@angular/material/button";
+import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatCardActions} from "@angular/material/card";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-password',
   standalone: true,
-    imports: [
-        ReactiveFormsModule,
-        MatFormField,
-        MatError,
-        MatFormField,
-        MatInput,
-        MatButton,
-        MatCardActions
-    ],
+  imports: [
+    ReactiveFormsModule,
+    MatFormField,
+    MatError,
+    MatFormField,
+    MatInput,
+    MatButton,
+    MatCardActions,
+    MatIcon,
+    MatIconButton,
+    MatLabel
+  ],
   templateUrl: './password.component.html',
   styleUrl: './password.component.css'
 })
 export class PasswordComponent {
   password_form = new FormControl('', [Validators.required]);
   errorMessage = '';
-
+  hide = true;
   constructor(private _Activatedroute: ActivatedRoute,private user: UserRequestService,private routing:Router) {
     merge(this.password_form.statusChanges, this.password_form.valueChanges)
       .pipe(takeUntilDestroyed())
